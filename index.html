@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<head>
+<title> About Me </title>
+
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+
+<style>
+
+img {
+	border-radius: 50%;
+	border: 4px solid white;
+	
+}
+
+img:hover {
+	border-radius: 50%;
+	border: 4px solid white;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+#pic {
+	float: left;
+}
+
+body {
+	align-content: center;
+}	
+header {
+	background: rgba(255,255,255,.5);
+	float: center;
+	border-radius: 5px;
+	}
+li {
+	display: inline;
+	font-size: 40px;
+	border-radius: 5px;
+	padding: 5px;
+	display: inline;
+	margin-left: 30px;
+	margin-right: 30px;
+	
+}
+
+a {
+	color: black;
+	font-family: 'Indie Flower';
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.Home {
+	border-right: 3px solid black;
+	padding-right: 70px;
+}
+
+.AboutMe {
+	border-right: 3px solid black;
+	padding-right: 70px;
+}
+
+
+body {
+	text-align: center;
+	background: url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?cs=srgb&dl=apple-black-and-white-black-and-white-169573.jpg&fm=jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-size: 30px;
+	color: black;	
+	
+}
+
+footer {
+	background: rgba(255,255,255,.3);
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+.myInfo {
+	background-color: rgb(64,64,64,.6);
+	margin: 0 250px 0 250px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 5px;
+	
+}
+
+h2 {
+	font-family: "Kalam";
+	color: white;
+	text-decoration: underline;
+	padding-bottom: 2px;
+}
+
+p {
+	color: white;
+	font-family: "Kalam";
+	/*font-weight: bold; */
+	font-size: 38px;
+}
+
+ol {
+	font-family: "Indie Flower";
+	font-weight: bold;
+	font-size: 38px;
+	color: white;
+}
+
+
+
+h3 {
+	color: white;
+	font-family: "Kalam";
+	margin-top: 100px;
+}
+
+input {
+	display: block;
+	margin: 8px 0 8px 0;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 25px;
+	border-radius: 10%;			
+}
+
+button {
+	font-size: 25px;
+	border-radius: 5px;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="MainImg"><img src="https://github.com/Hiaximize/FirstOne/blob/master/CroppedMainImage.JPG" style ></div>
+
+<header>
+	
+
+
+</header>
+
+<div class="myInfo">
+
+	<h2>Bio</h2>
+	<p><bold> <span id="pic"><img src="https://github.com/Hiaximize/FirstOne/blob/master/AboutMePic.jpg"></span> I served in the United States Army as an Infantrymen during which time I was deployed to Afghanistan, as well as various other countries in support of United States interests. I currently live in Herndon, VA with my wife and son. When I'm not spending time with my family, I really enjoy programming and spending my remaining free time learning and working on my own projects. I am currently obsessed with Python and writing Penetration testing based scripts / applications. I hope to obtain a career as a software developer or Full-Stack web developer where I can work my way towards being able to work remotely. My hobbies outside of writing code include practicing Jui-Jitsu and lifting weights.</bold></p>
+<br>
+<br>	
+	<h2>Languages</h2>	
+	<ol>
+		<li>HTML5/CSS</li>
+		<li>JavaScript</li>
+		<li>Oracle SQL</li>
+		<li>Java</li>
+		<li>Python</li>
+		<li>Bash</li>
+	</ol>
+
+</div>
+
+<div class="contact">
+	<h3> Contact Me </h3>
+	<div class="wrapper">
+	<span class="userInput">
+		<form name="Name" method="post" onsubmit="return validate()">
+			<input name="First" type="text" placeholder="First Name">
+			<input name="Last" type="text" placeholder="Last Name">
+		</span>
+		<input name="Phone"type="text" placeholder="Phone Number">
+		<input name="Email" type="email" placeholder="Email Address">
+		<input type="submit" value="Submit">	
+	</span>
+	<p id="demo"></p>
+</div>
+	
+</div>
+
+<footer>
+Created by Derek Barker (Est: 2019)
+</footer>
+
+
+<script>
+
+function displayInfo() {
+	var first = document.forms["Name"]["First"].value;
+	var thanks = "Thank you " + first + " for reaching out!";
+	alert(thanks);
+}
+
+function validate() {
+	var first = document.forms["Name"]["First"].value;
+	var last = document.forms["Name"]["Last"].value;
+	var email = document.forms["Name"]["Email"].value;
+	if (first == "") {
+		alert("First and Last name along with email required");
+		return false;
+	}
+	if (last == "") {
+		alert("First and Last name along with email required")
+		return false;
+	}
+	if (email == "") {
+		alert("First and Last name along with email required")
+		return false;
+	}
+	else {
+		displayInfo();
+	}
+}
+
+</script>
+
+</script>
+
+</body>
+
+</html>
